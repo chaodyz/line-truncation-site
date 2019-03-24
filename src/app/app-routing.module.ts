@@ -1,15 +1,17 @@
-import { NgxDemoComponent } from './ngxDemo/ngxDemo.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomePageComponent } from './ngx-demo/home-page.component';
 
 const routes: Routes = [
-  { path: 'ngx-demo', component: NgxDemoComponent },
   {
     path: '',
-    redirectTo: '/ngx-demo',
+    loadChildren: './ngx-demo/ngx-demo.module#NgxDemoModule',
+  },
+  {
+    path: '',
+    redirectTo: '',
     pathMatch: 'full',
   },
-  { path: '**', component: NgxDemoComponent },
 ];
 
 @NgModule({

@@ -1,0 +1,40 @@
+.toolbar-right {
+  flex: 1 1 auto;
+}
+.mat-toolbar-row {
+  height: 64px;
+}
+.mat-toolbar-multiple-rows {
+  min-height: 64px;
+}
+
+.mat-toolbar-multiple-rows {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  width: 100%;
+}
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* side nav */
+.sidenave-content {
+  min-height: 100vh;
+  padding: 80px 3rem 1rem;
+}
+
+.mat-sidenav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.mat-sidenav {
+  padding-top: 80px;
+}
