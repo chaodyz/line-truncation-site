@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-item',
@@ -8,10 +9,11 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class NavItemComponent implements OnInit, OnChanges {
   @Input()
   item;
-
+  @Input()
+  isActive = false;
   classes: NavItemClass;
-  isSelected = false;
-  constructor() {}
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.setClasses();
@@ -22,11 +24,11 @@ export class NavItemComponent implements OnInit, OnChanges {
 
   setClasses() {
     this.classes = {
-      selected: this.isSelected,
+      selected: this.isActive,
     };
   }
 
-  handleClick() {
-    this.setClasses();
+  handleClick(item) {
+    this.router.navigate(['/'], { fragment: item.url });
   }
 }

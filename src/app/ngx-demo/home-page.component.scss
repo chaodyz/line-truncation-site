@@ -26,7 +26,7 @@
 /* side nav */
 .sidenave-content {
   min-height: 100vh;
-  padding: 80px 3rem 1rem;
+  padding: 60px 3rem 1rem;
 }
 
 .mat-sidenav ul {
@@ -36,5 +36,16 @@
 }
 
 .mat-sidenav {
-  padding-top: 80px;
+  padding-top: 60px;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.01);
+  border: 0.5px solid rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  display: block;
+  margin: 16px auto;
+  overflow-x: auto;
+  padding: 20px;
+  white-space: pre-wrap;
 }

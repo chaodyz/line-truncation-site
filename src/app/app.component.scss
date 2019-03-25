@@ -1,10 +1,11 @@
+@import '../styles/main.scss';
 footer {
   position: relative;
   line-height: 24px;
   flex: 1;
-  padding: 48px;
+  padding: 24px;
   z-index: 0;
-  background-color: #1976d2;
+  background-color: $blue-800;
   color: #fafafa;
   font-weight: 300;
 }
@@ -26,11 +27,11 @@ footer div.grid-fluid {
   display: flex;
   justify-content: center;
   text-align: left;
-  margin: 0 0 40px;
+  margin: 0 0 20px;
 }
 
 .footer-block {
-  margin: 0 24px;
+  margin: 0 12px;
   vertical-align: top;
 }
 

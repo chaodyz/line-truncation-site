@@ -2,13 +2,67 @@
   <mat-sidenav mode="side" [opened]="true">
     <ul class="sidebar-links">
       <ng-container *ngFor="let item of sideMenuItems">
-        <app-nav-item [item]="item"></app-nav-item>
+        <app-nav-item [item]="item" [isActive]="(token | async) === item.url"></app-nav-item>
       </ng-container>
     </ul>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <main class="sidenave-content">
-      <router-outlet></router-outlet>
+      <h3 id="livedemo">Live Demo</h3>
+      <p [ngx-line-truncation]="2">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+        quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+        nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+      </p>
+
+      <p [ngx-line-truncation]="numOfLines" (hasTruncated)="truncateHandler($event)" [innerHTML]="longText"></p>
+      <button *ngIf="hasTruncated">More</button>
+      <input type="text" [(ngModel)]="numOfLines" />
+      {{ numOfLines }}
+      <h3 id="install">
+        Install
+      </h3>
+      <code>$ npm install npx-line-trncation</code>
+      <h3 id="howtouse">How to use</h3>
+      <pre>
+        <code>
+          My pre-formatted code
+          here.
+        </code>
+      </pre>
+      <blockquote>
+        <pre>
+          <code>
+              My pre-formatted "quoted" code here.
+          </code>
+        </pre>
+      </blockquote>
+      <textarea disabled>
+ <p [ngx-line-truncation]="2">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+        dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam
+        aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea
+        voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+        pariatur?"
+      </p> </textarea
+      >
+      <pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://fonts.googleapis.com/icon?family=Material+Icons"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span></code></pre>
+
+      <h3 id="contact">Contact me</h3>
+      <p>
+        Ff you have more idea about improving this package, feel free to reach me at
+        <a href="mailto:chaodyz@gmail.com">chaodyz@gmail.com</a>
+      </p>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>
