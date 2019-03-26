@@ -23,16 +23,16 @@ quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
   token: Observable<string>;
   sideMenuItems: NavItem[] = [
     {
-      text: 'Live Demo',
-      url: 'livedemo',
+      text: 'About',
+      url: 'about',
     },
     {
       text: 'Install',
       url: 'install',
     },
     {
-      text: 'How to use',
-      url: 'howtouse',
+      text: 'Demo',
+      url: 'demo',
     },
     {
       text: 'Contact',
