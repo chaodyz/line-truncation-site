@@ -44,8 +44,11 @@ pre {
   border: 0.5px solid rgba(0, 0, 0, 0.03);
   border-radius: 5px;
   display: block;
-  margin: 16px auto;
+  margin: 8px auto;
   overflow-x: auto;
-  padding: 20px;
-  white-space: pre-wrap;
+  padding: 10px;
+}
+
+.tag-hilight {
+  color: #008080;
 }

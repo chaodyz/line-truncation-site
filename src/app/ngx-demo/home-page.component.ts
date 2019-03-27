@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
@@ -11,15 +11,39 @@ import { ScrollService } from './services/scroll.service';
 })
 export class HomePageComponent implements OnInit {
   hasTruncated: boolean;
-  numOfLines = 2;
-  longText = `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.Nemo
-  enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-  qui ratione voluptatem sequi nesciunt.Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-  quaerat voluptatem.Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur ?`;
+  import = `import { LineTruncationLibModule } from 'ngx-line-truncation';
+
+    //...
+
+ @NgModule({
+  imports: [
+    // ...
+    LineTruncationLibModule
+  ]
+})
+export class myModule { }
+  `;
+  html1 = `<p [ngx-line-truncation]="2" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
+  consequatur ipsum unde doloremque aliquid hic vitae iure necessitatibus, maiores repellendus, quos
+  dignissimos Quis necessitatibus quos voluptas nesciunt facere mollitia cupiditate.</p>`;
+  html2 = ' <p [line-truncation]="numOfLines" (hasTruncated)="handler(booleanValue)" [innerHTML]="myText"></p>';
+  code2 = `export class myComponent implements OnInit {
+
+  hasTruncated = false;
+  numberOfLines = 2;
+  myText='Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga itaque voluptatibus sequi laborum, consequatur aut nisi.
+  Eaque nulla animi qui exercitationem suscipit voluptas cum est dicta, magnam odio et distinctio?';
+
+  //...
+
+  handler(result: boolean){
+    this.hasTruncated = result;
+  }
+  `;
+  html3 = `<p [ngx-line-truncation]="2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt consequatur ipsum unde
+  doloremque aliquid hic vitae iure necessitatibus, maiores repellendus, quos dignissimos? Quis necessitatibus quos voluptas
+  nesciunt facere mollitia cupiditate.</p>`;
+
   token: Observable<string>;
   sideMenuItems: NavItem[] = [
     {
@@ -50,6 +74,7 @@ quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas 
       })
     );
   }
+
   truncateHandler(e) {
     this.hasTruncated = e;
   }
