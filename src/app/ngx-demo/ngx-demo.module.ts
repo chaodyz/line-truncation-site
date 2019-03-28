@@ -8,6 +8,8 @@ import { NgxDemoRoutesModule } from './ngx-demo.routing';
 import { NavItemComponent } from './components/nav-item/nav-item.component';
 import { HomePageComponent } from './home-page.component';
 import { AngularMaterialModule } from '../angular-material/angular-material.module';
+import { NgxContentComponent } from './components/ngx-content/ngx-content.component';
+import { JsContentComponent } from './components/js-content/js-content.component';
 
 @NgModule({
   imports: [
@@ -18,6 +20,6 @@ import { AngularMaterialModule } from '../angular-material/angular-material.modu
     FormsModule,
     HighlightModule,
   ],
-  declarations: [HomePageComponent, NavItemComponent],
+  declarations: [HomePageComponent, NavItemComponent, NgxContentComponent, JsContentComponent],
 })
 export class NgxDemoModule {}

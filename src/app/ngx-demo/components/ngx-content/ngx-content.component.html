@@ -1,0 +1,56 @@
+<!-- Overview -->
+<h2 id="Overview"><a href="/#overview" class="anchor-tag">#</a>Overview</h2>
+<p>
+  Ngx Line Truncation is a <span class="tag-highlight">zero dependency</span> tool for Angular that truncate text by
+  user defined line number.
+</p>
+<p>
+  The solution was inspired by <a href="https://www.npmjs.com/package/line-clamp">Line Clamp</a> and
+  <a href="https://www.npmjs.com/package/shave">Shave</a>, and it is fast and more capable (solves the problem that
+  could not get <span class="tag-highlight">Line height</span> from <span class="tag-highlight">getComputedStyle</span>)
+</p>
+
+<!-- Feature -->
+<h3 id="feature"><a href="/#feature" class="anchor-tag">#</a>Feature</h3>
+<ul>
+  <li>Tailor made for Angular platform</li>
+  <li>Smart, does not require setting Line height or max height</li>
+  <li>Works with nest DOM element</li>
+  <li>Maintain original HTML element tags and styles</li>
+  <li>Lightening fast and capable</li>
+  <li>Custom ellipsis character</li>
+</ul>
+
+<!-- Install -->
+<h3 id="install"><a href="/#install" class="anchor-tag">#</a> Install</h3>
+To install, simply run
+
+<pre><code>$ npm install ngx-line-truncation</code></pre>
+
+And import to the module that use truncation
+
+<pre><code [highlight]="import" [languages]='langString'></code></pre>
+if you import this package into a shared module, you need to export
+<span class="tag-highlight">LineTruncationDirective</span>
+<pre><code [highlight]="import2" [languages]='langString'></code></pre>
+
+<!-- how to use -->
+<h3 id="demo"><a href="/#demo" class="anchor-tag">#</a>How to use</h3>
+
+<p>
+  Declare <span class="tag-highlight">[line-truncation]</span> with div, p, span, and pass a number that indicates how
+  many lines of text you are expected to truncate
+</p>
+
+<pre><code [highlight]="html1" ></code></pre>
+<pre><code [highlight]="html3"></code></pre>
+Optionally, an output function can help to know if the text has been truncated.
+<pre><code [highlight]="html2"></code></pre>
+in your component.ts file
+<pre><code [highlight]="code2" [languages]='langString'></code></pre>
+
+<h3 id="contact"><a href="/#contact" class="anchor-tag">#</a>Contact me</h3>
+<p>
+  If you have more idea about improving this package, feel free to reach me at
+  <a href="mailto:chaodyz@gmail.com">chaodyz@gmail.com</a>
+</p>

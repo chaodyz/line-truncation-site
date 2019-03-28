@@ -171,3 +171,8 @@ code {
     color: $mediumgray;
   }
 }
+
+md-sidenav-layout > md-content {
+  display: flex !important;
+  flex-direction: column !important;
+}

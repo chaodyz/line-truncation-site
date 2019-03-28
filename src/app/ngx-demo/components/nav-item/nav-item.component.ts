@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavItemClass } from '../../models/navigation.model';
 
 @Component({
   selector: 'app-nav-item',

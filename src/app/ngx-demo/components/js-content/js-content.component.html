@@ -1,0 +1,55 @@
+<!-- About -->
+<h2 id="about">Overview</h2>
+<p>
+  Ngx Line Truncation is a <span class="tag-hilight">zero dependency</span> tool for Angular that truncate text by user
+  defined line number.
+</p>
+<p>
+  The solution was inspired by <a href="https://www.npmjs.com/package/line-clamp">Line Clamp</a> and
+  <a href="https://www.npmjs.com/package/shave">Shave</a>, and it is fast and more capable (solves the problem that
+  could not get <span class="tag-hilight">Line height</span> from <span class="tag-hilight">getComputedStyle</span>)
+</p>
+
+<h3>Feature</h3>
+<ul>
+  <li>Tailor made for Angular platform</li>
+  <li>Smart, does not require setting Line height or max height</li>
+  <li>Works with nest DOM element</li>
+  <li>Maintain original HTML element tags and styles</li>
+  <li>Lightening fast and capable</li>
+  <li>Custom ellipsis character</li>
+</ul>
+
+<!-- Install -->
+<h3 id="install">
+  Install
+</h3>
+To install,simply run
+
+<pre><code>$ npm install ngx-line-truncation</code></pre>
+
+And import to the module that use truncation
+
+<pre><code [highlight]="import"></code></pre>
+
+<!-- how to use -->
+<h3 id="demo">How to use</h3>
+
+<p>
+  Declare <span class="tag-hilight">[line-truncation]</span> with div, p, span, and pass a number that indicates how
+  many lines of text you are expected to truncate
+</p>
+
+<pre><code [highlight]="html1" ></code></pre>
+or you could add function to take output value
+<pre> <code [highlight]="html2"></code></pre>
+and in your component.ts file
+<pre><code [highlight]="code2"></code></pre>
+
+<pre><code [highlight]="html3"></code></pre>
+
+<h3 id="contact">Contact me</h3>
+<p>
+  If you have more idea about improving this package, feel free to reach me at
+  <a href="mailto:chaodyz@gmail.com">chaodyz@gmail.com</a>
+</p>
