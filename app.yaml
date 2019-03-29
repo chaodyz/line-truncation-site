@@ -1,0 +1,9 @@
+# [START runtime]
+runtime: nodejs8
+handlers:
+  - url: /
+    static_files: dist/line-truncation-demo/index.html
+    upload: dist/line-truncation-demo/index.html
+  - url: /
+    static_dir: dist/line-truncation-demo
+# [END runtime]
