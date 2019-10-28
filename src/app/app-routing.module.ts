@@ -5,7 +5,7 @@ import { HomePageComponent } from './ngx-demo/home-page.component';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: './ngx-demo/ngx-demo.module#NgxDemoModule',
+    loadChildren: () => import('./ngx-demo/ngx-demo.module').then(m => m.NgxDemoModule),
   },
   {
     path: '',
