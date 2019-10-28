@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-js-content',
   templateUrl: './js-content.component.html',
-  styleUrls: ['./js-content.component.css'],
+  styleUrls: ['./js-content.component.scss'],
 })
 export class JsContentComponent implements OnInit {
   hasTruncated: boolean;
@@ -22,7 +22,8 @@ export class myModule { }
   html1 = `<p [ngx-line-truncation]="2" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
   consequatur ipsum unde doloremque aliquid hic vitae iure necessitatibus, maiores repellendus, quos
   dignissimos Quis necessitatibus quos voluptas nesciunt facere mollitia cupiditate.</p>`;
-  html2 = ' <p [line-truncation]="numOfLines" (hasTruncated)="handler(booleanValue)" [innerHTML]="myText"></p>';
+  html2 =
+    ' <p [line-truncation]="numOfLines" (hasTruncated)="handler(booleanValue)" [innerHTML]="myText"></p>';
   code2 = `export class myComponent implements OnInit {
 
   hasTruncated = false;

@@ -32,6 +32,10 @@ export class HomePageComponent implements OnInit {
         url: 'demo',
       },
       {
+        text: 'Update',
+        url: 'update',
+      },
+      {
         text: 'Contact',
         url: 'contact',
       },

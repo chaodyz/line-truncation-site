@@ -1,13 +1,14 @@
 <!-- Overview -->
 <h2 id="overview"><a href="/#overview" class="anchor-tag">#</a>Overview</h2>
 <p>
-  Ngx Line Truncation is a <span class="tag-highlight">zero dependency</span> tool for Angular that truncate text by
-  user defined line number.
+  Ngx Line Truncation is a <span class="tag-highlight">zero dependency</span> tool for Angular that
+  truncate text by user defined line number.
 </p>
 <p>
   The solution was inspired by <a href="https://www.npmjs.com/package/line-clamp">Line Clamp</a> and
-  <a href="https://www.npmjs.com/package/shave">Shave</a>, and it is fast and more capable (solves the problem that
-  could not get <span class="tag-highlight">Line height</span> from <span class="tag-highlight">getComputedStyle</span>)
+  <a href="https://www.npmjs.com/package/shave">Shave</a>, and it is fast and more capable (solves
+  the problem that could not get <span class="tag-highlight">Line height</span> from
+  <span class="tag-highlight">getComputedStyle</span>)
 </p>
 
 <!-- Feature -->
@@ -16,18 +17,20 @@
   <li>Tailor made for Angular platform</li>
   <li>Smart, does not require setting Line height or max height</li>
   <li>Works with nest DOM element</li>
-  <li>Maintain original HTML element tags and styles</li>
+  <li>Support rich text, maintain original HTML element tags and styles</li>
   <li>Lightening fast and capable</li>
   <li>Custom ellipsis character</li>
+  <li>Re-execute on window resize</li>
 </ul>
 
 <!-- Install -->
 <h3 id="install"><a href="/#install" class="anchor-tag">#</a> Install</h3>
-To install, simply run
+
+<p>To install, simply run</p>
 
 <pre><code>$ npm install ngx-line-truncation</code></pre>
 
-And import to the module that use truncation
+<p>And import to the module that use truncation</p>
 
 <pre><code [highlight]="import" [languages]='langString'></code></pre>
 if you import this package into a shared module, you need to export
@@ -38,16 +41,39 @@ if you import this package into a shared module, you need to export
 <h3 id="demo"><a href="/#demo" class="anchor-tag">#</a>How to use</h3>
 
 <p>
-  Declare <span class="tag-highlight">[line-truncation]</span> with div, p, span, and pass a number that indicates how
-  many lines of text you are expected to truncate
+  Declare <span class="tag-highlight">[line-truncation]</span> with div, p, span, and pass a number
+  that indicates how many lines of text you are expected to truncate
 </p>
 
 <pre><code [highlight]="html1" ></code></pre>
 <pre><code [highlight]="html3"></code></pre>
-Optionally, an output function can help to know if the text has been truncated.
+
+<p>Optionally, an output function can help to know if the text has been truncated.</p>
+
 <pre><code [highlight]="html2"></code></pre>
 in your component.ts file
 <pre><code [highlight]="code2" [languages]='langString'></code></pre>
+
+<p>
+  By default, '...' will be added to the end of the truncated body, if you wish to use your desired
+  ellipsis, you can pass an object like this
+</p>
+
+<pre><code [highlight]="html4" [languages]='langString'></code></pre>
+
+<p>
+  Known issue: When you specify emoji as ellipsis 🚀, or use rich text( p [innerHTML]), the
+  truncation result might ended up with less lines than you desired(e.g. desire 3, but only have 1).
+  I will be looking into this issue in the future, current work around for this issue is say you
+  realize you get 1 line instead 3, you could declare with 5, it will be truncated to 3.
+</p>
+
+<h3 id="update"><a href="/#Update" class="anchor-tag">#</a>Update</h3>
+<h2>10-27</h2>
+<ul>
+  <li>add input disabled</li>
+  <li>fix an issue when not truncating, hasTruncated is not emitting value</li>
+</ul>
 
 <h3 id="contact"><a href="/#contact" class="anchor-tag">#</a>Contact me</h3>
 <p>

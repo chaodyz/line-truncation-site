@@ -32,7 +32,7 @@ export class MySharedModule {}
   html1 = `<p [line-truncation]="2" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt
   consequatur ipsum unde doloremque aliquid hic vitae iure necessitatibus, maiores repellendus, quos
   dignissimos Quis necessitatibus quos voluptas nesciunt facere mollitia cupiditate.</p>`;
-  html2 = `<p [line-truncation]="numOfLines" (hasTruncated)="handler(booleanValue)" [innerHTML]="myText"></p>`;
+  html2 = `<p [line-truncation]="numOfLines" (hasTruncated)="handler($event)" [innerHTML]="myText"></p>`;
   code2 = `export class myComponent implements OnInit {
 
   hasTruncated = false;
@@ -51,6 +51,9 @@ export class MySharedModule {}
   html3 = `<div [line-truncation]="2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt consequatur ipsum unde
   doloremque aliquid hic vitae iure necessitatibus, maiores repellendus, quos dignissimos? Quis necessitatibus quos voluptas
   nesciunt facere mollitia cupiditate.</div>`;
+
+  html4 = `<p [line-truncation]="numOfLines" [options]="{ellipsis: "🚀"}"
+  (hasTruncated)="handler(booleanValue)" [innerHTML]="myText" [disabled]="disabled"></p>`;
   constructor() {}
 
   ngOnInit() {}

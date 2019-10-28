@@ -1,0 +1,13 @@
+:host {
+  .tag-highlight {
+    color: #008080;
+  }
+  pre {
+    background: rgba(0, 0, 0, 0.01);
+    border: 0.5px solid rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    display: block;
+    overflow-x: auto;
+    padding: 10px;
+  }
+}
